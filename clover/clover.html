@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+</head>
+<body>
+    <div class="btn_confetti"></div>
+    <div class="txt">
+        <h1>행운의 🍀네잎클로버 찾기 게임</h1>
+        <p>아래 풀밭에서 행운의 네잎클로버를 찾아보세요!</p>
+        <p>제한시간은 1분입니다!</p>
+    </div>
+    <div class="timer_wrap">
+        <div id="timer">01:00</div>
+        <button id="resetBtn">시간 연장〜(꒪꒳꒪)〜</button>
+        <div id="cong">축하합니다!<b>생일</b>을.맞이한.<em></em>님의.하루에.<i>웃음꽃</i>이.만개하시길~^^</div>
+    </div>
+    <div class="cat">
+        <img src="cat.gif" alt="">
+    </div>
+    <div class="ham">
+        <img src="ham.png" alt="">
+    </div>
+    <div class="wrap">
+        <div class="congBox"></div>
+        <div class="imgBox"></div>
+        <div class="cloverWrap">
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            
+            <div class="clover crown"></div>
+        </div>
+    </div>
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            
+        }
+        @keyframes rainbow {
+            0% { background-color: red; }
+            14% { background-color: orange; }
+            28% { background-color: yellow; }
+            42% { background-color: green; }
+            56% { background-color: blue; }
+            70% { background-color: indigo; }
+            84% { background-color: violet; }
+            100% { background-color: red; }
+        }
+        .rainbow-bg {
+            animation: rainbow 2s linear infinite;
+        }
+        .cat {
+            position: absolute;
+            bottom: -10px;
+            z-index: 10;
+            display: none;
+            animation: cat 5s linear infinite;
+        }
+        @keyframes cat {
+            0% { left: 0; }
+            50% { left: 50%; }
+            100% { left: 100%; }
+        }
+        .txt {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .txt h1 {}
+        .txt h1 p {}
+        .timer_wrap {
+            position: fixed;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 100%;
+            height: 150px;
+        }
+        #timer {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        button {
+            font-size: 18px;
+            margin: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.7s ease;
+        }
+        #cong {
+            font-weight: bold;
+            font-size: 50px;
+            display: none;
+            font-family: "Dongle", sans-serif;
+            font-weight: normal;
+            color: #fff;
+            -webkit-text-stroke:2px fuchsia;
+        }
+        #cong b {
+            font-style: italic;
+            color: rgb(222, 16, 16);
+            font-size: 60px;
+            -webkit-text-stroke: 0px #fff;
+        }
+        #cong em {
+            color: rgb(34, 183, 34);
+            font-size: 60px;
+            -webkit-text-stroke: 0px #fff;
+        }
+        #cong i {
+            color: orange;
+            font-size: 60px;
+            -webkit-text-stroke: 0px #fff;
+        }
+        .wrap {
+            width: 1200px;
+            height: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .wrap .imgBox {
+            width: 100%;
+            height: 100%;
+            background-image: url(grass.jpg);
+            background-size: cover;
+            transition: opacity 2s;
+        }
+        .wrap .imgBox.hide {
+            opacity: 0;
+        }
+        .wrap .congBox {
+            width: 45%;
+            height: 100%;
+            background-image: url(cong2.gif);
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+        }
+        .wrap .cloverWrap {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .wrap .box {
+            width: 120px;
+            height: 120px;
+            /* background-color: red; */
+            position: relative;
+        }
+        .wrap .box div {
+            background-image: url(3clover.png);
+            background-size: cover;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            cursor: pointer;
+            transition: transform 0.3s;
+            transition: opacity 2s;
+        }
+        .box div.hide {
+            opacity: 0;
+        }
+        .wrap .box div:hover {
+            z-index: 1;
+            transform: scale(1.5);
+            filter: drop-shadow(0 0 10px hsl(99, 79%, 72%));
+        }
+        .wrap .box div:nth-child(1) {
+            left: -40px;
+            top: 0;
+        }
+        .wrap .box div:nth-child(2) {
+            left: 0;
+            top: -30px;
+            transform: rotate(-20deg);
+
+        }
+        .wrap .box div:nth-child(3) {
+            left: 20px;
+            top: 10px;
+            
+        }
+        .wrap .box div:nth-child(4) {
+            left: 60px;
+            top: -10px;
+            
+        }
+        .wrap .box div:nth-child(5) {
+            left: -10px;
+            top: 40px;
+        }
+        .wrap .box div:nth-child(6) {
+            left: 50px;
+            top: 30px;
+            transform: rotate(20deg);
+        }
+        .wrap .box div:nth-child(7) {
+            left: 70px;
+            top: 50px;
+            transform: rotate(-20deg);
+        }
+        .wrap .box div:nth-child(8) {
+            left: 30px;
+            top: 70px;
+        }
+        .wrap .box div:nth-child(9) {
+            left: -20px;
+            top: 80px;
+            transform: rotate(20deg);
+        }
+
+        .clover {
+            width: 80px;
+            height: 80px;
+            background-image: url(4cloverCopy.png);
+            /* background-color: #fff; */
+            background-size: cover;
+            position: absolute;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .clover.enlarged {
+            width: 300px;
+            height: 300px;
+        }
+        .clover:hover {
+            z-index: 1;
+            transform: scale(1.5);
+            filter: drop-shadow(0 0 10px hsl(99, 79%, 72%));
+        }
+        .clover.crown {
+            top: 150px;
+            left: 200px;
+        }
+        .clover.cookie {
+            bottom: 200px;
+            right: 500px;
+        }
+        .btn_confetti {
+            width: 200px;
+            height: 200px;
+            
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            margin-left: -100px;
+        }
+        .ham {
+            display: none;
+        }
+        .ham.show {
+            display: block;
+        }
+        .ham img {
+            animation: ham 0.06s infinite alternate;
+            width: 400px;
+            height: auto;
+            position: absolute;
+            left: 50%;
+            margin-left: -200px;
+            top: 10%;
+            z-index: 99;
+        }
+        @keyframes ham {
+            0%  {
+                transform: translateX(0);
+            }
+            100%  {
+                transform: translateX(15px);
+            }
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+
+            alert('게임을 시작하시겠습니까?')
+            let time = 600; // 60초 * 10 (0.1초 단위로 계산)
+            let timerInterval;
+            let isRainbowActive = false;
+
+            function updateTimer() {
+                let minutes = Math.floor(time / 600);
+                let seconds = Math.floor((time % 600) / 10);
+                let tenths = time % 10;
+                
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                
+                $("#timer").text(minutes + ":" + seconds + ":" + tenths);
+                
+                if (time === 200 && !isRainbowActive) { // 10초 남았을 때
+                    $("body").addClass("rainbow-bg");
+                    isRainbowActive = true;
+
+                    // .cat 이 보이기 시작한다
+                    $(".cat").css("display", "block");
+
+                }
+                
+                if (time === 0) {
+                    clearInterval(timerInterval);
+                    alert("타이머 종료! 클로버는 못찾았지만 넘 즐거웠잔아!\n완전 럭키 비키니시티~ദ്ദിᐡ,,•ᴥ•,,ᐡ ꒱");
+                    // cat 이 안보이기 시작한다
+                    $(".cat").css("display", "none");
+                    $("body").removeClass("rainbow-bg");
+                    isRainbowActive = false;
+                }
+                time--;
+            }
+
+            // 타이머 자동 시작
+            clearInterval(timerInterval);
+            timerInterval = setInterval(updateTimer, 100);
+
+            // 리셋 버튼
+            $("#resetBtn").click(function() {
+                clearInterval(timerInterval);
+                time = 600;
+                $("#timer").text("01:00:0");
+                timerInterval = setInterval(updateTimer, 100);
+                $("body").removeClass("rainbow-bg");
+                isRainbowActive = false;
+
+                // cat 이 안보이기 시작한다
+                $(".cat").css("display", "none");
+            });
+
+            // 리셋 버튼 도망가기 기능
+            $("#resetBtn").on("mouseenter", function() {
+                let containerWidth = $(".timer_wrap").width();
+                let containerHeight = $(".timer_wrap").height();
+                let btnWidth = $(this).outerWidth();
+                let btnHeight = $(this).outerHeight();
+
+                let maxX = containerWidth - btnWidth;
+                let maxY = containerHeight - btnHeight;
+
+                let randomX = Math.floor(Math.random() * maxX);
+                let randomY = Math.floor(Math.random() * maxY);
+
+                $(this).css({
+                    "position": "absolute",
+                    "left": randomX + "px",
+                    "top": randomY + "px"
+                });
+            });
+
+            // 네잎클로버 클릭시 크기 커지기
+            $('.clover').click(function(){
+                $(this).addClass('enlarged')
+                // 타이머 멈추기
+                clearInterval(timerInterval);
+                // 리셋버튼 사라지기
+                $('#resetBtn').css({'display':'none'});
+                // #cong 등장
+                $('#cong').fadeIn(2000)
+                // 세잎클로버와 grass 배경 사라지기
+                $('.box div').addClass('hide')
+                $('.imgBox').addClass('hide')
+
+                // 10초 남았을 때 효과 제거
+                $("body").removeClass("rainbow-bg");
+                    isRainbowActive = false;
+
+                // .cat 이 보이기 시작한다
+                $(".cat").css("display", "none");
+
+                // 시작점으로 설정할 요소 가져오기
+                const canvas = $('.btn_confetti')[0];
+                
+                // Canvas 요소의 위치 정보를 가져오기
+                const canvasRect = canvas.getBoundingClientRect();
+                var duration = 15 * 1000;
+                var animationEnd = Date.now() + duration;
+                var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+                function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+                }
+
+                var interval = setInterval(function() {
+                var timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                var particleCount = 50 * (timeLeft / duration);
+                // since particles fall down, start a bit higher than random
+                confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+                confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+                }, 250);
+                
+                // Canvas Confetti 라이브러리를 사용하여 효과 적용
+                confetti({
+                    particleCount: 400,
+                    spread: 180,
+                    origin: {
+                        x: (canvasRect.left + canvasRect.width / 2) / window.innerWidth,
+                        y: (canvasRect.top + canvasRect.height / 2) / window.innerHeight
+                    }
+                });
+            })
+
+            // 세잎 클로버 클릭시 햄스터 이미지 등장
+            $('.box div').click(function(){
+                $('.ham').addClass('show')
+                setTimeout(function(){
+                    $('.ham').removeClass('show')
+                }, 500)
+            })
+
+
+
+
+
+
+    
+        });
+    </script>
+</body>
+</html>
