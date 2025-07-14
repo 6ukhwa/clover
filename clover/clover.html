@@ -868,15 +868,15 @@
                     $("body").addClass("rainbow-bg");
                     isRainbowActive = true;
 
-                    // .cat 이 보이기 시작한다
+                    // .cat 이 보임
                     $(".cat").css("display", "block");
 
                 }
                 
                 if (time === 0) {
                     clearInterval(timerInterval);
-                    alert("타이머 종료! 클로버는 못찾았지만 넘 즐거웠잔아!\n완전 럭키 비키니시티~ദ്ദിᐡ,,•ᴥ•,,ᐡ ꒱");
-                    // cat 이 안보이기 시작한다
+                    alert("타이머 종료! 클로버는 못찾았지만 넘 즐거웠잔아!\n완전 럭키 비키니시티~ദ്ദിᐡ,,•ᴥ•,,ᐡ ꒱ \생일 축하합니다~!");
+                    // cat 이 안보이기 시작
                     $(".cat").css("display", "none");
                     $("body").removeClass("rainbow-bg");
                     isRainbowActive = false;
@@ -897,11 +897,11 @@
                 $("body").removeClass("rainbow-bg");
                 isRainbowActive = false;
 
-                // cat 이 안보이기 시작한다
+                // cat 이 안보이기 시작
                 $(".cat").css("display", "none");
             });
 
-            // 리셋 버튼 도망가기 기능
+            // 리셋 버튼 도망가기
             $("#resetBtn").on("mouseenter", function() {
                 let containerWidth = $(".timer_wrap").width();
                 let containerHeight = $(".timer_wrap").height();
@@ -938,7 +938,7 @@
                 $("body").removeClass("rainbow-bg");
                     isRainbowActive = false;
 
-                // .cat 이 보이기 시작한다
+                // .cat 이 보이기 시작
                 $(".cat").css("display", "none");
 
                 // 시작점으로 설정할 요소 가져오기
