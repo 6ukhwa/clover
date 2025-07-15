@@ -28,7 +28,7 @@ $(document).ready(function(){
                 
                 if (time === 0) {
                     clearInterval(timerInterval);
-                    alert("타이머 종료! 클로버는 못찾았지만 넘 즐거웠잔아!\n완전 럭키 비키니시티~ദ്ദിᐡ,,•ᴥ•,,ᐡ ꒱ \생일 축하합니다~!");
+                    alert("⏰타이머 종료! 클로버는 못찾았지만 넘 즐거웠잔아\n완전 럭키 비키니시티~ദ്ദിᐡ,,•ᴥ•,,ᐡ ꒱생일 축하합니다~!🎉");
                     // cat 이 안보이기 시작
                     $(".cat").css("display", "none");
                     $("body").removeClass("rainbow-bg");

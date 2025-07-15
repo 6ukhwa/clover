@@ -2,7 +2,7 @@
 @charset 'utf-8';
 
 
-@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
         * {
             padding: 0;
             margin: 0;
@@ -66,29 +66,13 @@
             transition: all 0.7s ease;
         }
         #cong {
+            margin-top: 50px;
             font-weight: bold;
             font-size: 50px;
             display: none;
-            font-family: "Dongle", sans-serif;
+            font-family: "Jua", sans-serif;
             font-weight: normal;
-            color: #fff;
-            -webkit-text-stroke:2px fuchsia;
-        }
-        #cong b {
-            font-style: italic;
-            color: rgb(222, 16, 16);
-            font-size: 60px;
-            -webkit-text-stroke: 0px #fff;
-        }
-        #cong em {
-            color: rgb(34, 183, 34);
-            font-size: 60px;
-            -webkit-text-stroke: 0px #fff;
-        }
-        #cong i {
-            color: orange;
-            font-size: 60px;
-            -webkit-text-stroke: 0px #fff;
+            color: pink;
         }
         .wrap {
             width: 1200px;
@@ -112,8 +96,8 @@
         .wrap .imgBox.hide {
             display: none;
         }
-        .wrap .congBox {
-            width: 45%;
+        /* .wrap .congBox {
+            width: 100%;
             height: 100%;
             background-image: url(img/cong2.gif);
             background-size: contain;
@@ -121,7 +105,7 @@
             top: 0;
             right: 0;
             z-index: -1;
-        }
+        } */
         .wrap .cloverWrap {
             width: 100%;
             height: 100%;
@@ -210,17 +194,22 @@
             transition: all 0.3s;
         }
         .clover.enlarged {
-            width: 300px;
-            height: 300px;
+            width: 400px !important;
+            height: 400px !important;
+            left: 50% !important;
+            top: 15% !important;
+            margin-left: -200px;
+            z-index: 1;
         }
         .clover:hover {
-            z-index: 1;
             transform: scale(1.5);
             filter: drop-shadow(0 0 10px hsl(99, 79%, 72%));
         }
         .clover.crown {
-            top: 150px;
-            left: 200px;
+            width: 90px;
+            height: 90px;
+            top: 20%;
+            left: 20%;
         }
         .clover.cookie {
             bottom: 200px;
@@ -243,12 +232,13 @@
         }
         .ham img {
             animation: ham 0.06s infinite alternate;
-            width: 400px;
+            width: 350px;
             height: auto;
             position: absolute;
             left: 50%;
-            margin-left: -200px;
-            top: 10%;
+            margin-left: -175px;
+            top: 30%;
+            opacity: 0.6;
             z-index: 99;
         }
         @keyframes ham {
