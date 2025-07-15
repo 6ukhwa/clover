@@ -1,0 +1,261 @@
+
+@charset 'utf-8';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            
+        }
+        @keyframes rainbow {
+            0% { background-color: red; }
+            14% { background-color: orange; }
+            28% { background-color: yellow; }
+            42% { background-color: green; }
+            56% { background-color: blue; }
+            70% { background-color: indigo; }
+            84% { background-color: violet; }
+            100% { background-color: red; }
+        }
+        .rainbow-bg {
+            animation: rainbow 2s linear infinite;
+        }
+        .cat {
+            position: absolute;
+            bottom: -10px;
+            z-index: 10;
+            display: none;
+            animation: cat 5s linear infinite;
+        }
+        @keyframes cat {
+            0% { left: 0; }
+            50% { left: 50%; }
+            100% { left: 100%; }
+        }
+        .txt {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .txt h1 {}
+        .txt h1 p {}
+        .timer_wrap {
+            position: fixed;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 100%;
+            height: 150px;
+        }
+        #timer {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        button {
+            font-size: 18px;
+            margin: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.7s ease;
+        }
+        #cong {
+            font-weight: bold;
+            font-size: 50px;
+            display: none;
+            font-family: "Dongle", sans-serif;
+            font-weight: normal;
+            color: #fff;
+            -webkit-text-stroke:2px fuchsia;
+        }
+        #cong b {
+            font-style: italic;
+            color: rgb(222, 16, 16);
+            font-size: 60px;
+            -webkit-text-stroke: 0px #fff;
+        }
+        #cong em {
+            color: rgb(34, 183, 34);
+            font-size: 60px;
+            -webkit-text-stroke: 0px #fff;
+        }
+        #cong i {
+            color: orange;
+            font-size: 60px;
+            -webkit-text-stroke: 0px #fff;
+        }
+        .wrap {
+            width: 1200px;
+            height: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .wrap .imgBox {
+            width: 100%;
+            height: 100%;
+            background-image: url(grass.jpg);
+            background-size: cover;
+            transition: opacity 2s;
+        }
+        .wrap .imgBox.hide {
+            display: none;
+        }
+        .wrap .congBox {
+            width: 45%;
+            height: 100%;
+            background-image: url(cong2.gif);
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+        }
+        .wrap .cloverWrap {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .wrap .box {
+            width: 120px;
+            height: 120px;
+            /* background-color: red; */
+            position: relative;
+        }
+        .wrap .box div {
+            background-image: url(3clover.png);
+            background-size: cover;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            cursor: pointer;
+            transition: transform 0.3s;
+            transition: opacity 2s;
+        }
+        .box div.hide {
+            display: none;
+        }
+        .wrap .box div:hover {
+            z-index: 1;
+            transform: scale(1.5);
+            filter: drop-shadow(0 0 10px hsl(99, 79%, 72%));
+        }
+        .wrap .box div:nth-child(1) {
+            left: -40px;
+            top: 0;
+        }
+        .wrap .box div:nth-child(2) {
+            left: 0;
+            top: -30px;
+            transform: rotate(-20deg);
+
+        }
+        .wrap .box div:nth-child(3) {
+            left: 20px;
+            top: 10px;
+            
+        }
+        .wrap .box div:nth-child(4) {
+            left: 60px;
+            top: -10px;
+            
+        }
+        .wrap .box div:nth-child(5) {
+            left: -10px;
+            top: 40px;
+        }
+        .wrap .box div:nth-child(6) {
+            left: 50px;
+            top: 30px;
+            transform: rotate(20deg);
+        }
+        .wrap .box div:nth-child(7) {
+            left: 70px;
+            top: 50px;
+            transform: rotate(-20deg);
+        }
+        .wrap .box div:nth-child(8) {
+            left: 30px;
+            top: 70px;
+        }
+        .wrap .box div:nth-child(9) {
+            left: -20px;
+            top: 80px;
+            transform: rotate(20deg);
+        }
+
+        .clover {
+            width: 80px;
+            height: 80px;
+            background-image: url(4cloverCopy.png);
+            /* background-color: #fff; */
+            background-size: cover;
+            position: absolute;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .clover.enlarged {
+            width: 300px;
+            height: 300px;
+        }
+        .clover:hover {
+            z-index: 1;
+            transform: scale(1.5);
+            filter: drop-shadow(0 0 10px hsl(99, 79%, 72%));
+        }
+        .clover.crown {
+            top: 150px;
+            left: 200px;
+        }
+        .clover.cookie {
+            bottom: 200px;
+            right: 500px;
+        }
+        .btn_confetti {
+            width: 200px;
+            height: 200px;
+            
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            margin-left: -100px;
+        }
+        .ham {
+            display: none;
+        }
+        .ham.show {
+            display: block;
+        }
+        .ham img {
+            animation: ham 0.06s infinite alternate;
+            width: 400px;
+            height: auto;
+            position: absolute;
+            left: 50%;
+            margin-left: -200px;
+            top: 10%;
+            z-index: 99;
+        }
+        @keyframes ham {
+            0%  {
+                transform: translateX(0);
+            }
+            100%  {
+                transform: translateX(15px);
+            }
+        }
