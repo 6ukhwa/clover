@@ -1,6 +1,30 @@
 $(document).ready(function(){
 
+            // 박스 안 세잎클로버 순회 돌면서 랜덤 위치 조정
+            $(".box>div").each(function () {
+                const $el = $(this);
+                const rx = Math.floor(Math.random() * 30) - 15;
+                const ry = Math.floor(Math.random() * 20) - 10;
+                const cur = $el.css("transform");
+                const translate = `translate(${rx}px, ${ry}px)`; // px로 위치 조정
+                if (cur && cur !== "none") { // rotate 있는 클로버 그대로 유지
+                    $el.css("transform", cur + " " + translate);
+                } else {
+                    $el.css("transform", translate);
+                }
+            });
 
+            // 네잎클로버 본인 크기 내에서 위치이동
+            $(".clover.crown")
+                .css("transition", "none")
+                .css("transform", function () {
+                    const $el = $(this);
+                    const rx = Math.floor(Math.random() * 100);
+                    const ry = Math.floor(Math.random() * 100);
+                    const translate = `translate(${rx}%, ${ry}%)`; // 본인 크기 내에서 %이동
+                    $el.css("transform", translate);
+                })
+                .css("transition", "all 0.3s");
 
             alert('게임을 시작하시겠습니까?')
             let time = 600; // 60초 * 10 (0.1초 단위로 계산)
