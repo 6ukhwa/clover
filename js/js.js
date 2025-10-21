@@ -3,8 +3,8 @@ $(document).ready(function(){
             // 박스 안 세잎클로버 순회 돌면서 랜덤 위치 조정
             $(".box>div").each(function () {
                 const $el = $(this);
-                const rx = Math.floor(Math.random() * 30) - 15;
-                const ry = Math.floor(Math.random() * 20) - 10;
+                const rx = Math.floor(Math.random() * 50) - 25;
+                const ry = Math.floor(Math.random() * 50) - 25;
                 const cur = $el.css("transform");
                 const translate = `translate(${rx}px, ${ry}px)`; // px로 위치 조정
                 if (cur && cur !== "none") { // rotate 있는 클로버 그대로 유지
@@ -101,6 +101,8 @@ $(document).ready(function(){
             // 네잎클로버 클릭시 크기 커지기
             $('.clover').click(function(){
                 $(this).addClass('enlarged')
+                // 네잎클로버 위치 이동 원복
+                $(".clover.crown").css("transform","");
                 // 타이머 멈추기
                 clearInterval(timerInterval);
                 // 리셋버튼 사라지기
